@@ -26,6 +26,10 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Build app
+        run: |
+          ng build --configuration dev --source-map=false --progress=false
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
